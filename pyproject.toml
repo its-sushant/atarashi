@@ -11,6 +11,6 @@ requires = [
   "pyxDamerauLevenshtein>=1.5",
   "nirjas>=0.0.5",
   "urllib3>=1.24.1",
-  "logreg>=0.1.0"
+  "logreg>=0.1.0",
   "linearsvc>=0.1.1"
 ]

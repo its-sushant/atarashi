@@ -117,7 +117,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("-a", "--agent_name", required=True,
                       choices=['wordFrequencySimilarity', 'DLD',
-                               'tfidf', 'Ngram', 'logisticRegression', 'linearsvc'],
+                               'tfidf', 'Ngram', 'logisticRegression', 'linearsvc', 'bm25'],
                       help="Name of the agent that needs to be run")
   parser.add_argument("-s", "--similarity", required=False, default="CosineSim",
                       choices=["ScoreSim", "CosineSim", "DiceSim", "BigramCosineSim"],
@@ -155,4 +155,5 @@ if __name__ == "__main__":
   print('      ' + '+' * 44)
 
   shutil.rmtree('TestFiles')
+
 
