@@ -63,6 +63,9 @@ Get the help by running `atarashi -h` or `atarashi --help`
 - Running **logisticRegression** agent
 
     `atarashi -a logisticRegression /path/to/file.c`
+- Running **linearsvc** agent
+
+    `atarashi -a linearsvc /path/to/file.c`
 - Running **tfidf** agent
     - With **Cosine similarity**
 
@@ -199,3 +202,4 @@ This will generate file in `docs/_build/html`. Go to: index.html
 You can change the theme of the documentation by changing `html_theme` in config.py file in `docs/` folder.
 You can choose from {'alabaster', 'classic', 'sphinxdoc', 'scrolls', 'agogo', 'traditional', 'nature', 'haiku', 'pyramid', 'bizstyle'}
 [Reference](https://www.sphinx-doc.org/en/master/usage/theming.html)
+

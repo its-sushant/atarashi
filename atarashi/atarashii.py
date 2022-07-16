@@ -29,6 +29,7 @@ from atarashi.agents.dameruLevenDist import DameruLevenDist
 from atarashi.agents.tfidf import TFIDF
 from atarashi.agents.wordFrequencySimilarity import WordFrequencySimilarity
 from atarashi.agents.logisticRegression import LogisticRegression
+from atarashi.agents.linearsvc import Linearsvc
 
 __author__ = "Aman Jain"
 __email__ = "amanjain5221@gmail.com"
@@ -80,6 +81,8 @@ def build_scanner_obj(processedLicense, agent_name, similarity="CosineSim",
     scanner = DameruLevenDist(processedLicense)
   elif agent_name == "logisticRegression":
     scanner = LogisticRegression(processedLicense)
+  elif agent_name == "linearsvc":
+    scanner = Linearsvc(processedLicense)
   elif agent_name == "tfidf":
     scanner = TFIDF(processedLicense)
     if similarity == "CosineSim":
@@ -131,7 +134,7 @@ def main():
                       help="Specify the location of processed license list file")
   parser.add_argument("-a", "--agent_name", required=True,
                       choices=['wordFrequencySimilarity', 'DLD',
-                               'tfidf', 'Ngram', 'logisticRegression'],
+                               'tfidf', 'Ngram', 'logisticRegression', 'linearsvc'],
                       help="Name of the agent that needs to be run")
   parser.add_argument("-s", "--similarity", required=False, default="CosineSim",
                       choices=["ScoreSim", "CosineSim", "DiceSim", "BigramCosineSim"],
@@ -212,3 +215,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+

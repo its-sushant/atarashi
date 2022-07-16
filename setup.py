@@ -71,6 +71,7 @@ requirements = [
   'urllib3>=1.24.1',
   'nirjas>=0.0.5',
   'logreg>=0.1.0'
+  'linearsvc>=0.1.1'
 ]
 
 class BuildAtarashiDependencies(distutils.cmd.Command):
@@ -156,3 +157,4 @@ metadata = dict(
 )
 
 setup(**metadata)
+
